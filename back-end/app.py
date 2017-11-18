@@ -1,11 +1,16 @@
 #!flask/bin/python
-from flask import Flask
+from flask import Flask, jsonify, abort
+import json
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/countries')
 def index():
-    return "Hello, World!"
+    return readCountries()
+
+def readCountries():
+    with open('data.json', 'r') as f:
+        return json.load(f)
 
 if __name__ == '__main__':
     app.run(debug=True)
