@@ -1,7 +1,11 @@
-#!flask/bin/python
-from flask import Flask, jsonify, abort, make_response, request
-from flask_pymongo import PyMongo
+#!flask/bin/pythopn
 import json
+import re
+import simplejson
+import bcrypt
+from bson import json_util
+from flask import Flask, abort, jsonify, make_response, request
+from flask_pymongo import PyMongo
 
 app = Flask(__name__)
 mongo = PyMongo(app)
@@ -27,7 +31,8 @@ def getCountries():
 
 @app.route('/users/', methods=['GET'])
 def getUsers():
-    return jsonify(users)
+    usersa = mongo.db.users.find()
+    return json_util.dumps(usersa)
 
 @app.route('/users/<string:user_name>', methods=['GET'])
 def getUser(user_name):
@@ -40,22 +45,27 @@ def loginUser():
     password = request.form['inputPassword']
     user = mongo.db.users.find_one({'email': email})
     if user:
-        if User.validate_login(user['password'], password):
-            user_obj = User(email)
-            return redirect(url_for('user.profile'))
+        hashed = bcrypt.hashpw(password.encode('utf8'), user['password'])
+        if hashed == user['password']:
+            return jsonify({'result': 'Success'})
         else:
-            print('Incorrect Credentials')
+            return jsonify({'result': 'Incorrect password'})
     else:
-        return redirect(url_for('home.register'))
+        return jsonify({'result': 'Incorrect email'})
+
 
 @app.route('/users/register/', methods=['POST'])
 def registerUser():
     email = request.form['inputEmail']
+    if not re.match(r'^[A-Za-z0-9\.\+_-]+@[A-Za-z0-9\._-]+\.[a-zA-Z]*$', email):
+        return jsonify({'result': 'Email is incorrect'})
     password = request.form['inputPassword']
     if mongo.db.users.find_one({'email': email}):
         return jsonify({'result': 'Email already exist'})
     else:
-        mongo.db.users.insert({'email': email, 'password': password, 'authenticated': False})
+        salt = bcrypt.gensalt()
+        hashed = bcrypt.hashpw(password.encode('utf8'), salt)
+        mongo.db.users.insert({'email': email, 'password': hashed, 'authenticated': False})
         return jsonify({'result': 'Registered'})
 
 @app.route('/users/update/<string:user_name>', methods=['PUT'])
