@@ -1,0 +1,276 @@
+2017-11-23T13:37:29.119+0100 I CONTROL  [main] Trying to start Windows service 'MongoDB'
+2017-11-23T13:37:29.121+0100 I CONTROL  [initandlisten] MongoDB starting : pid=3816 port=27017 dbpath=C:\Users\viner\Documents\GitHub\HeatHoax\back-end\data\db 64-bit host=ZBookG2
+2017-11-23T13:37:29.121+0100 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-11-23T13:37:29.121+0100 I CONTROL  [initandlisten] db version v3.4.10
+2017-11-23T13:37:29.121+0100 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-11-23T13:37:29.121+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-11-23T13:37:29.121+0100 I CONTROL  [initandlisten] modules: none
+2017-11-23T13:37:29.121+0100 I CONTROL  [initandlisten] build environment:
+2017-11-23T13:37:29.121+0100 I CONTROL  [initandlisten]     distmod: 2008plus
+2017-11-23T13:37:29.121+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2017-11-23T13:37:29.121+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-11-23T13:37:29.121+0100 I CONTROL  [initandlisten] options: { config: "C:\Program Files\MongoDB\Server\3.4\mongod.cfg", service: true, storage: { dbPath: "C:\Users\viner\Documents\GitHub\HeatHoax\back-end\data\db" }, systemLog: { destination: "file", path: "C:\Users\viner\Documents\GitHub\HeatHoax\back-end\data\log\mongod.log" } }
+2017-11-23T13:37:29.122+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7620M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-11-23T13:37:29.192+0100 I CONTROL  [initandlisten] 
+2017-11-23T13:37:29.192+0100 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-11-23T13:37:29.192+0100 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-11-23T13:37:29.192+0100 I CONTROL  [initandlisten] 
+2017-11-23T13:37:29.357+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/Users/viner/Documents/GitHub/HeatHoax/back-end/data/db/diagnostic.data'
+2017-11-23T13:37:29.380+0100 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+2017-11-23T13:37:29.380+0100 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-11-23T13:37:29.384+0100 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+2017-11-23T13:37:29.385+0100 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+2017-11-23T13:37:29.386+0100 I NETWORK  [thread1] waiting for connections on port 27017
+2017-11-23T13:37:29.386+0100 I STORAGE  [initandlisten] Service running
+2017-11-23T13:37:36.238+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:49330 #1 (1 connection now open)
+2017-11-23T13:37:36.239+0100 I NETWORK  [conn1] received client metadata from 127.0.0.1:49330 conn1: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:37:36.262+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:49331 #2 (2 connections now open)
+2017-11-23T13:37:36.263+0100 I NETWORK  [conn2] received client metadata from 127.0.0.1:49331 conn2: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:38:02.680+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:49364 #3 (3 connections now open)
+2017-11-23T13:38:02.680+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:49365 #4 (4 connections now open)
+2017-11-23T13:38:02.681+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:49366 #5 (5 connections now open)
+2017-11-23T13:38:02.683+0100 I -        [conn3] end connection 127.0.0.1:49364 (5 connections now open)
+2017-11-23T13:38:02.793+0100 I -        [conn4] end connection 127.0.0.1:49365 (4 connections now open)
+2017-11-23T13:38:02.931+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:49367 #6 (4 connections now open)
+2017-11-23T13:38:07.295+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:49374 #7 (5 connections now open)
+2017-11-23T13:38:07.295+0100 I NETWORK  [conn7] received client metadata from 127.0.0.1:49374 conn7: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:38:13.728+0100 I -        [conn5] end connection 127.0.0.1:49366 (5 connections now open)
+2017-11-23T13:38:13.729+0100 I -        [conn6] end connection 127.0.0.1:49367 (5 connections now open)
+2017-11-23T13:39:29.437+0100 I -        [conn1] end connection 127.0.0.1:49330 (3 connections now open)
+2017-11-23T13:39:29.437+0100 I -        [conn7] end connection 127.0.0.1:49374 (3 connections now open)
+2017-11-23T13:39:29.704+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:49472 #8 (2 connections now open)
+2017-11-23T13:39:29.704+0100 I NETWORK  [conn8] received client metadata from 127.0.0.1:49472 conn8: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:40:02.329+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:49510 #9 (3 connections now open)
+2017-11-23T13:40:02.330+0100 I NETWORK  [conn9] received client metadata from 127.0.0.1:49510 conn9: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:41:27.867+0100 I -        [conn8] end connection 127.0.0.1:49472 (3 connections now open)
+2017-11-23T13:41:27.867+0100 I -        [conn9] end connection 127.0.0.1:49510 (3 connections now open)
+2017-11-23T13:41:28.149+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:49606 #10 (2 connections now open)
+2017-11-23T13:41:28.149+0100 I NETWORK  [conn10] received client metadata from 127.0.0.1:49606 conn10: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:41:36.170+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:49619 #11 (3 connections now open)
+2017-11-23T13:41:36.170+0100 I NETWORK  [conn11] received client metadata from 127.0.0.1:49619 conn11: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:42:29.750+0100 I -        [conn11] end connection 127.0.0.1:49619 (3 connections now open)
+2017-11-23T13:42:29.750+0100 I -        [conn10] end connection 127.0.0.1:49606 (3 connections now open)
+2017-11-23T13:42:30.022+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:49689 #12 (2 connections now open)
+2017-11-23T13:42:30.023+0100 I NETWORK  [conn12] received client metadata from 127.0.0.1:49689 conn12: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:42:35.346+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:49698 #13 (3 connections now open)
+2017-11-23T13:42:35.346+0100 I NETWORK  [conn13] received client metadata from 127.0.0.1:49698 conn13: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:48:43.956+0100 I -        [conn12] end connection 127.0.0.1:49689 (3 connections now open)
+2017-11-23T13:48:43.956+0100 I -        [conn13] end connection 127.0.0.1:49698 (3 connections now open)
+2017-11-23T13:48:44.231+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50117 #14 (2 connections now open)
+2017-11-23T13:48:44.231+0100 I NETWORK  [conn14] received client metadata from 127.0.0.1:50117 conn14: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:49:24.299+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50163 #15 (3 connections now open)
+2017-11-23T13:49:24.300+0100 I NETWORK  [conn15] received client metadata from 127.0.0.1:50163 conn15: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:52:45.055+0100 I -        [conn15] end connection 127.0.0.1:50163 (3 connections now open)
+2017-11-23T13:52:45.056+0100 I -        [conn14] end connection 127.0.0.1:50117 (3 connections now open)
+2017-11-23T13:52:45.313+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50389 #16 (2 connections now open)
+2017-11-23T13:52:45.314+0100 I NETWORK  [conn16] received client metadata from 127.0.0.1:50389 conn16: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:52:46.874+0100 I -        [conn16] end connection 127.0.0.1:50389 (2 connections now open)
+2017-11-23T13:52:47.153+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50393 #17 (2 connections now open)
+2017-11-23T13:52:47.154+0100 I NETWORK  [conn17] received client metadata from 127.0.0.1:50393 conn17: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:52:57.191+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50407 #18 (3 connections now open)
+2017-11-23T13:52:57.192+0100 I NETWORK  [conn18] received client metadata from 127.0.0.1:50407 conn18: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:53:38.741+0100 I -        [conn17] end connection 127.0.0.1:50393 (3 connections now open)
+2017-11-23T13:53:38.741+0100 I -        [conn18] end connection 127.0.0.1:50407 (3 connections now open)
+2017-11-23T13:53:39.005+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50458 #19 (2 connections now open)
+2017-11-23T13:53:39.006+0100 I NETWORK  [conn19] received client metadata from 127.0.0.1:50458 conn19: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:53:48.611+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50469 #20 (3 connections now open)
+2017-11-23T13:53:48.611+0100 I NETWORK  [conn20] received client metadata from 127.0.0.1:50469 conn20: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:54:31.594+0100 I -        [conn19] end connection 127.0.0.1:50458 (3 connections now open)
+2017-11-23T13:54:31.594+0100 I -        [conn20] end connection 127.0.0.1:50469 (3 connections now open)
+2017-11-23T13:54:31.853+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50525 #21 (2 connections now open)
+2017-11-23T13:54:31.854+0100 I NETWORK  [conn21] received client metadata from 127.0.0.1:50525 conn21: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:54:47.002+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50545 #22 (3 connections now open)
+2017-11-23T13:54:47.002+0100 I NETWORK  [conn22] received client metadata from 127.0.0.1:50545 conn22: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:54:58.938+0100 I -        [conn21] end connection 127.0.0.1:50525 (3 connections now open)
+2017-11-23T13:54:58.938+0100 I -        [conn22] end connection 127.0.0.1:50545 (3 connections now open)
+2017-11-23T13:54:59.755+0100 I -        [conn2] end connection 127.0.0.1:49331 (1 connection now open)
+2017-11-23T13:57:24.917+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50722 #23 (1 connection now open)
+2017-11-23T13:57:24.917+0100 I NETWORK  [conn23] received client metadata from 127.0.0.1:50722 conn23: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:57:25.267+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50723 #24 (2 connections now open)
+2017-11-23T13:57:25.268+0100 I NETWORK  [conn24] received client metadata from 127.0.0.1:50723 conn24: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:57:28.932+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50729 #25 (3 connections now open)
+2017-11-23T13:57:28.932+0100 I NETWORK  [conn25] received client metadata from 127.0.0.1:50729 conn25: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:57:34.816+0100 I -        [conn25] end connection 127.0.0.1:50729 (3 connections now open)
+2017-11-23T13:57:34.816+0100 I -        [conn24] end connection 127.0.0.1:50723 (2 connections now open)
+2017-11-23T13:57:35.091+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50736 #26 (2 connections now open)
+2017-11-23T13:57:35.091+0100 I NETWORK  [conn26] received client metadata from 127.0.0.1:50736 conn26: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:57:36.241+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50739 #27 (3 connections now open)
+2017-11-23T13:57:36.241+0100 I NETWORK  [conn27] received client metadata from 127.0.0.1:50739 conn27: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:59:50.291+0100 I -        [conn27] end connection 127.0.0.1:50739 (3 connections now open)
+2017-11-23T13:59:50.291+0100 I -        [conn26] end connection 127.0.0.1:50736 (3 connections now open)
+2017-11-23T13:59:50.555+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50889 #28 (2 connections now open)
+2017-11-23T13:59:50.555+0100 I NETWORK  [conn28] received client metadata from 127.0.0.1:50889 conn28: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T13:59:51.831+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50893 #29 (3 connections now open)
+2017-11-23T13:59:51.831+0100 I NETWORK  [conn29] received client metadata from 127.0.0.1:50893 conn29: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:00:22.141+0100 I -        [conn28] end connection 127.0.0.1:50889 (3 connections now open)
+2017-11-23T14:00:22.141+0100 I -        [conn29] end connection 127.0.0.1:50893 (3 connections now open)
+2017-11-23T14:00:22.417+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50928 #30 (2 connections now open)
+2017-11-23T14:00:22.417+0100 I NETWORK  [conn30] received client metadata from 127.0.0.1:50928 conn30: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:00:24.226+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:50932 #31 (3 connections now open)
+2017-11-23T14:00:24.226+0100 I NETWORK  [conn31] received client metadata from 127.0.0.1:50932 conn31: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:03:39.758+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51164 #32 (4 connections now open)
+2017-11-23T14:03:39.759+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51165 #33 (5 connections now open)
+2017-11-23T14:03:39.760+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51166 #34 (6 connections now open)
+2017-11-23T14:03:39.761+0100 I -        [conn32] end connection 127.0.0.1:51164 (6 connections now open)
+2017-11-23T14:03:39.895+0100 I -        [conn33] end connection 127.0.0.1:51165 (5 connections now open)
+2017-11-23T14:03:39.895+0100 I -        [conn34] end connection 127.0.0.1:51166 (4 connections now open)
+2017-11-23T14:03:40.011+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51168 #35 (4 connections now open)
+2017-11-23T14:03:40.013+0100 I -        [conn35] end connection 127.0.0.1:51168 (4 connections now open)
+2017-11-23T14:03:41.658+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51174 #36 (4 connections now open)
+2017-11-23T14:03:41.659+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51175 #37 (5 connections now open)
+2017-11-23T14:03:41.660+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51176 #38 (6 connections now open)
+2017-11-23T14:03:41.661+0100 I -        [conn36] end connection 127.0.0.1:51174 (6 connections now open)
+2017-11-23T14:03:41.715+0100 I -        [conn37] end connection 127.0.0.1:51175 (5 connections now open)
+2017-11-23T14:03:41.767+0100 I -        [conn38] end connection 127.0.0.1:51176 (4 connections now open)
+2017-11-23T14:03:41.909+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51178 #39 (4 connections now open)
+2017-11-23T14:03:46.382+0100 I -        [conn39] end connection 127.0.0.1:51178 (4 connections now open)
+2017-11-23T14:03:46.686+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51185 #40 (4 connections now open)
+2017-11-23T14:03:46.687+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51186 #41 (5 connections now open)
+2017-11-23T14:03:46.688+0100 I -        [conn40] end connection 127.0.0.1:51185 (5 connections now open)
+2017-11-23T14:03:46.755+0100 I -        [conn41] end connection 127.0.0.1:51186 (4 connections now open)
+2017-11-23T14:03:56.201+0100 I -        [conn31] end connection 127.0.0.1:50932 (3 connections now open)
+2017-11-23T14:03:56.201+0100 I -        [conn30] end connection 127.0.0.1:50928 (3 connections now open)
+2017-11-23T14:03:56.456+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51198 #42 (2 connections now open)
+2017-11-23T14:03:56.456+0100 I NETWORK  [conn42] received client metadata from 127.0.0.1:51198 conn42: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:04:44.538+0100 I -        [conn42] end connection 127.0.0.1:51198 (2 connections now open)
+2017-11-23T14:04:44.806+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51256 #43 (2 connections now open)
+2017-11-23T14:04:44.806+0100 I NETWORK  [conn43] received client metadata from 127.0.0.1:51256 conn43: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:04:51.917+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51266 #44 (3 connections now open)
+2017-11-23T14:04:51.917+0100 I NETWORK  [conn44] received client metadata from 127.0.0.1:51266 conn44: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:05:58.929+0100 I -        [conn44] end connection 127.0.0.1:51266 (3 connections now open)
+2017-11-23T14:05:58.929+0100 I -        [conn43] end connection 127.0.0.1:51256 (3 connections now open)
+2017-11-23T14:05:59.201+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51338 #45 (2 connections now open)
+2017-11-23T14:05:59.202+0100 I NETWORK  [conn45] received client metadata from 127.0.0.1:51338 conn45: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:06:01.761+0100 I -        [conn45] end connection 127.0.0.1:51338 (2 connections now open)
+2017-11-23T14:06:02.011+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51341 #46 (2 connections now open)
+2017-11-23T14:06:02.011+0100 I NETWORK  [conn46] received client metadata from 127.0.0.1:51341 conn46: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:06:04.544+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51347 #47 (3 connections now open)
+2017-11-23T14:06:04.544+0100 I NETWORK  [conn47] received client metadata from 127.0.0.1:51347 conn47: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:07:00.106+0100 I -        [conn47] end connection 127.0.0.1:51347 (3 connections now open)
+2017-11-23T14:07:00.107+0100 I -        [conn46] end connection 127.0.0.1:51341 (3 connections now open)
+2017-11-23T14:07:00.363+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51428 #48 (2 connections now open)
+2017-11-23T14:07:00.363+0100 I NETWORK  [conn48] received client metadata from 127.0.0.1:51428 conn48: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:07:02.696+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51434 #49 (3 connections now open)
+2017-11-23T14:07:02.697+0100 I NETWORK  [conn49] received client metadata from 127.0.0.1:51434 conn49: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:08:09.491+0100 I -        [conn48] end connection 127.0.0.1:51428 (3 connections now open)
+2017-11-23T14:08:09.491+0100 I -        [conn49] end connection 127.0.0.1:51434 (3 connections now open)
+2017-11-23T14:08:09.748+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51513 #50 (2 connections now open)
+2017-11-23T14:08:09.748+0100 I NETWORK  [conn50] received client metadata from 127.0.0.1:51513 conn50: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:08:12.829+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51518 #51 (3 connections now open)
+2017-11-23T14:08:12.830+0100 I NETWORK  [conn51] received client metadata from 127.0.0.1:51518 conn51: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:08:39.811+0100 I -        [conn50] end connection 127.0.0.1:51513 (3 connections now open)
+2017-11-23T14:08:39.811+0100 I -        [conn51] end connection 127.0.0.1:51518 (3 connections now open)
+2017-11-23T14:08:40.068+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51553 #52 (2 connections now open)
+2017-11-23T14:08:40.068+0100 I NETWORK  [conn52] received client metadata from 127.0.0.1:51553 conn52: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:08:42.475+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51557 #53 (3 connections now open)
+2017-11-23T14:08:42.475+0100 I NETWORK  [conn53] received client metadata from 127.0.0.1:51557 conn53: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:09:12.667+0100 I -        [conn52] end connection 127.0.0.1:51553 (3 connections now open)
+2017-11-23T14:09:12.668+0100 I -        [conn53] end connection 127.0.0.1:51557 (3 connections now open)
+2017-11-23T14:09:12.927+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51594 #54 (2 connections now open)
+2017-11-23T14:09:12.927+0100 I NETWORK  [conn54] received client metadata from 127.0.0.1:51594 conn54: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:09:15.709+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51598 #55 (3 connections now open)
+2017-11-23T14:09:15.709+0100 I NETWORK  [conn55] received client metadata from 127.0.0.1:51598 conn55: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:09:55.030+0100 I -        [conn54] end connection 127.0.0.1:51594 (3 connections now open)
+2017-11-23T14:09:55.030+0100 I -        [conn55] end connection 127.0.0.1:51598 (3 connections now open)
+2017-11-23T14:09:55.285+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51644 #56 (2 connections now open)
+2017-11-23T14:09:55.286+0100 I NETWORK  [conn56] received client metadata from 127.0.0.1:51644 conn56: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:09:58.284+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51650 #57 (3 connections now open)
+2017-11-23T14:09:58.284+0100 I NETWORK  [conn57] received client metadata from 127.0.0.1:51650 conn57: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:10:19.872+0100 I -        [conn57] end connection 127.0.0.1:51650 (3 connections now open)
+2017-11-23T14:10:19.872+0100 I -        [conn56] end connection 127.0.0.1:51644 (3 connections now open)
+2017-11-23T14:10:20.133+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51675 #58 (2 connections now open)
+2017-11-23T14:10:20.133+0100 I NETWORK  [conn58] received client metadata from 127.0.0.1:51675 conn58: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:10:22.754+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51680 #59 (3 connections now open)
+2017-11-23T14:10:22.754+0100 I NETWORK  [conn59] received client metadata from 127.0.0.1:51680 conn59: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:10:50.710+0100 I -        [conn59] end connection 127.0.0.1:51680 (3 connections now open)
+2017-11-23T14:10:50.710+0100 I -        [conn58] end connection 127.0.0.1:51675 (3 connections now open)
+2017-11-23T14:10:50.976+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51721 #60 (2 connections now open)
+2017-11-23T14:10:50.976+0100 I NETWORK  [conn60] received client metadata from 127.0.0.1:51721 conn60: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:10:55.180+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51727 #61 (3 connections now open)
+2017-11-23T14:10:55.180+0100 I NETWORK  [conn61] received client metadata from 127.0.0.1:51727 conn61: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:11:43.086+0100 I -        [conn60] end connection 127.0.0.1:51721 (3 connections now open)
+2017-11-23T14:11:43.087+0100 I -        [conn61] end connection 127.0.0.1:51727 (3 connections now open)
+2017-11-23T14:11:43.438+0100 I -        [conn23] end connection 127.0.0.1:50722 (1 connection now open)
+2017-11-23T14:11:55.209+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51795 #62 (1 connection now open)
+2017-11-23T14:11:55.209+0100 I NETWORK  [conn62] received client metadata from 127.0.0.1:51795 conn62: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:11:55.564+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51796 #63 (2 connections now open)
+2017-11-23T14:11:55.564+0100 I NETWORK  [conn63] received client metadata from 127.0.0.1:51796 conn63: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:11:58.392+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:51801 #64 (3 connections now open)
+2017-11-23T14:11:58.393+0100 I NETWORK  [conn64] received client metadata from 127.0.0.1:51801 conn64: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:14:53.309+0100 I -        [conn63] end connection 127.0.0.1:51796 (3 connections now open)
+2017-11-23T14:14:53.309+0100 I -        [conn64] end connection 127.0.0.1:51801 (3 connections now open)
+2017-11-23T14:14:53.616+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52004 #65 (2 connections now open)
+2017-11-23T14:14:53.617+0100 I NETWORK  [conn65] received client metadata from 127.0.0.1:52004 conn65: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:15:07.671+0100 I -        [conn65] end connection 127.0.0.1:52004 (2 connections now open)
+2017-11-23T14:15:07.949+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52023 #66 (2 connections now open)
+2017-11-23T14:15:07.950+0100 I NETWORK  [conn66] received client metadata from 127.0.0.1:52023 conn66: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:16:38.098+0100 I -        [conn66] end connection 127.0.0.1:52023 (2 connections now open)
+2017-11-23T14:16:38.363+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52126 #67 (2 connections now open)
+2017-11-23T14:16:38.364+0100 I NETWORK  [conn67] received client metadata from 127.0.0.1:52126 conn67: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:16:40.707+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52130 #68 (3 connections now open)
+2017-11-23T14:16:40.707+0100 I NETWORK  [conn68] received client metadata from 127.0.0.1:52130 conn68: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:21:31.255+0100 I -        [conn67] end connection 127.0.0.1:52126 (3 connections now open)
+2017-11-23T14:21:31.255+0100 I -        [conn68] end connection 127.0.0.1:52130 (3 connections now open)
+2017-11-23T14:21:31.515+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52497 #69 (2 connections now open)
+2017-11-23T14:21:31.515+0100 I NETWORK  [conn69] received client metadata from 127.0.0.1:52497 conn69: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:23:01.669+0100 I -        [conn69] end connection 127.0.0.1:52497 (2 connections now open)
+2017-11-23T14:23:01.924+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52637 #70 (2 connections now open)
+2017-11-23T14:23:01.924+0100 I NETWORK  [conn70] received client metadata from 127.0.0.1:52637 conn70: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:23:02.455+0100 I -        [conn70] end connection 127.0.0.1:52637 (2 connections now open)
+2017-11-23T14:23:03.022+0100 I -        [conn62] end connection 127.0.0.1:51795 (1 connection now open)
+2017-11-23T14:23:46.612+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52689 #71 (1 connection now open)
+2017-11-23T14:23:46.612+0100 I NETWORK  [conn71] received client metadata from 127.0.0.1:52689 conn71: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:23:47.148+0100 I -        [conn71] end connection 127.0.0.1:52689 (1 connection now open)
+2017-11-23T14:25:34.987+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52822 #72 (1 connection now open)
+2017-11-23T14:25:34.987+0100 I NETWORK  [conn72] received client metadata from 127.0.0.1:52822 conn72: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:25:35.346+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52823 #73 (2 connections now open)
+2017-11-23T14:25:35.347+0100 I NETWORK  [conn73] received client metadata from 127.0.0.1:52823 conn73: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:26:11.424+0100 I -        [conn73] end connection 127.0.0.1:52823 (2 connections now open)
+2017-11-23T14:26:11.559+0100 I -        [conn72] end connection 127.0.0.1:52822 (1 connection now open)
+2017-11-23T14:26:27.076+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52886 #74 (1 connection now open)
+2017-11-23T14:26:27.076+0100 I NETWORK  [conn74] received client metadata from 127.0.0.1:52886 conn74: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:26:27.432+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52888 #75 (2 connections now open)
+2017-11-23T14:26:27.432+0100 I NETWORK  [conn75] received client metadata from 127.0.0.1:52888 conn75: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:26:45.516+0100 I -        [conn75] end connection 127.0.0.1:52888 (2 connections now open)
+2017-11-23T14:26:45.773+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:52911 #76 (2 connections now open)
+2017-11-23T14:26:45.773+0100 I NETWORK  [conn76] received client metadata from 127.0.0.1:52911 conn76: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:28:40.956+0100 I -        [conn76] end connection 127.0.0.1:52911 (2 connections now open)
+2017-11-23T14:28:41.217+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:53047 #77 (2 connections now open)
+2017-11-23T14:28:41.217+0100 I NETWORK  [conn77] received client metadata from 127.0.0.1:53047 conn77: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:28:44.549+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:53054 #78 (3 connections now open)
+2017-11-23T14:28:44.549+0100 I NETWORK  [conn78] received client metadata from 127.0.0.1:53054 conn78: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:33:55.147+0100 I -        [conn78] end connection 127.0.0.1:53054 (3 connections now open)
+2017-11-23T14:33:55.147+0100 I -        [conn77] end connection 127.0.0.1:53047 (3 connections now open)
+2017-11-23T14:33:55.630+0100 I -        [conn74] end connection 127.0.0.1:52886 (1 connection now open)
+2017-11-23T14:34:14.610+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:53614 #79 (1 connection now open)
+2017-11-23T14:34:14.610+0100 I NETWORK  [conn79] received client metadata from 127.0.0.1:53614 conn79: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:34:14.975+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:53615 #80 (2 connections now open)
+2017-11-23T14:34:14.975+0100 I NETWORK  [conn80] received client metadata from 127.0.0.1:53615 conn80: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:34:50.569+0100 I -        [conn80] end connection 127.0.0.1:53615 (2 connections now open)
+2017-11-23T14:34:50.834+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:53657 #81 (2 connections now open)
+2017-11-23T14:34:50.834+0100 I NETWORK  [conn81] received client metadata from 127.0.0.1:53657 conn81: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:35:11.897+0100 I -        [conn81] end connection 127.0.0.1:53657 (2 connections now open)
+2017-11-23T14:35:12.185+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:53683 #82 (2 connections now open)
+2017-11-23T14:35:12.185+0100 I NETWORK  [conn82] received client metadata from 127.0.0.1:53683 conn82: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:35:24.233+0100 I -        [conn82] end connection 127.0.0.1:53683 (2 connections now open)
+2017-11-23T14:35:24.508+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:53697 #83 (2 connections now open)
+2017-11-23T14:35:24.508+0100 I NETWORK  [conn83] received client metadata from 127.0.0.1:53697 conn83: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:36:10.119+0100 I -        [conn83] end connection 127.0.0.1:53697 (2 connections now open)
+2017-11-23T14:36:10.421+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:53749 #84 (2 connections now open)
+2017-11-23T14:36:10.421+0100 I NETWORK  [conn84] received client metadata from 127.0.0.1:53749 conn84: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:36:51.276+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:53820 #85 (3 connections now open)
+2017-11-23T14:36:51.276+0100 I NETWORK  [conn85] received client metadata from 127.0.0.1:53820 conn85: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:38:10.116+0100 I -        [conn84] end connection 127.0.0.1:53749 (3 connections now open)
+2017-11-23T14:38:10.116+0100 I -        [conn85] end connection 127.0.0.1:53820 (3 connections now open)
+2017-11-23T14:38:10.384+0100 I NETWORK  [thread1] connection accepted from 127.0.0.1:53903 #86 (2 connections now open)
+2017-11-23T14:38:10.385+0100 I NETWORK  [conn86] received client metadata from 127.0.0.1:53903 conn86: { driver: { name: "PyMongo", version: "3.5.1" }, os: { type: "Windows", name: "Windows ", architecture: "AMD64", version: "10.0.14393-" }, platform: "CPython 3.5.0.final.0" }
+2017-11-23T14:38:59.991+0100 I -        [conn86] end connection 127.0.0.1:53903 (2 connections now open)
+2017-11-23T14:39:00.466+0100 I -        [conn79] end connection 127.0.0.1:53614 (1 connection now open)
+2017-11-23T14:39:11.055+0100 I CONTROL  [serviceShutdown] got SERVICE_CONTROL_STOP request from Windows Service Control Manager, will terminate after current cmd ends
+2017-11-23T14:39:11.055+0100 I NETWORK  [serviceShutdown] shutdown: going to close listening sockets...
+2017-11-23T14:39:11.055+0100 I NETWORK  [serviceShutdown] closing listening socket: 512
+2017-11-23T14:39:11.055+0100 I NETWORK  [serviceShutdown] shutdown: going to flush diaglog...
+2017-11-23T14:39:11.055+0100 I FTDC     [serviceShutdown] Shutting down full-time diagnostic data capture
+2017-11-23T14:39:11.065+0100 I STORAGE  [serviceShutdown] WiredTigerKVEngine shutting down
+2017-11-23T14:39:11.258+0100 I STORAGE  [serviceShutdown] shutdown: removing fs lock...
+2017-11-23T14:39:11.258+0100 I CONTROL  [serviceShutdown] now exiting
