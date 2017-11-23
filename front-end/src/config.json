@@ -1,0 +1,29 @@
+{
+  "global": {
+    "config": {
+      "default_zoom": 4,
+      "default_position": {
+        "lon": 5.325488857076454,
+        "lat": 52.16095453519493
+      },
+      "circle_radius": 0
+    }
+  },
+  "env": {
+    "dev": {
+      "config": {
+        "env": "dev"
+      }
+    },
+    "test": {
+      "config": {
+        "env": "test"
+      }
+    },
+    "prod": {
+      "config": {
+        "env": "prod"
+      }
+    }
+  }
+}

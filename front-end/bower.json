@@ -1,0 +1,13 @@
+{
+  "name": "heat-hoax",
+  "license": "proprietary",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "font-awesome": "fontawesome#^4.7.0",
+    "angular": "^1.6.5",
+    "angular-animate": "^1.6.5",
+    "angular-bootstrap": "^2.5.0",
+    "angular-ui-router": "^1.0.6"
+  }
+}

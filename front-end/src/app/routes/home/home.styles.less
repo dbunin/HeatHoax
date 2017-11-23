@@ -1,0 +1,50 @@
+
+
+@navbar-width: 30%;
+
+.intro-left {
+  width: @navbar-width;
+  position: fixed;
+  border-radius: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+  background-color: @white;
+  -webkit-box-shadow: -9px 8px 89px 0 rgba(0,0,0,0.61);
+  -moz-box-shadow: -9px 8px 89px 0 rgba(0,0,0,0.61);
+  box-shadow: -9px 8px 89px 0 rgba(0,0,0,0.61);
+  z-index: 999;
+  color: #474747;
+
+  .step {
+    border-radius: 50%;
+    background: #0067f4;
+    font-size: 12px;
+    color: #fff;
+    height: 24px;
+    display: inline-block;
+    width: 25px;
+    padding: 1px 11px;
+    margin-right: 4px;
+  }
+
+  .spaced-step {
+    padding: 0 9px;
+  }
+
+  .step-label {
+    margin-top: 2px;
+  }
+  
+}
+
+#map {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: @navbar-width;
+  width: 100% - @navbar-width;
+  height: 100%;
+}
+
