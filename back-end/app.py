@@ -1,8 +1,10 @@
 #!flask/bin/python
 from flask import Flask, jsonify, abort, make_response, request
+from flask_pymongo import PyMongo
 import json
 
 app = Flask(__name__)
+mongo = PyMongo(app)
 # temperary dictionary
 users = [
     {
@@ -29,23 +31,32 @@ def getUsers():
 
 @app.route('/users/<string:user_name>', methods=['GET'])
 def getUser(user_name):
-    user = [u for u in users if u['user_name'] == user_name]
-    if len(user) == 0:
-        abort(404)
-    return jsonify({'user': user[0]})
+    user = mongo.db.users.find_one_or_404({'_id': username})
+    return jsonify({'user': user})
+
+@app.route('/users/login/', methods=['POST'])
+def loginUser():
+    email = request.form['inputEmail']
+    password = request.form['inputPassword']
+    user = mongo.db.users.find_one({'email': email})
+    if user:
+        if User.validate_login(user['password'], password):
+            user_obj = User(email)
+            return redirect(url_for('user.profile'))
+        else:
+            print('Incorrect Credentials')
+    else:
+        return redirect(url_for('home.register'))
 
 @app.route('/users/register/', methods=['POST'])
 def registerUser():
-    if not request.json or not 'user_name' in request.json:
-        abort(400)
-    user = {
-        'user_name': request.json['user_name'],
-        'name': request.json['name'],
-        'last_name': request.json['last_name'],
-        'password': request.json['last_name']
-    }
-    users.append(user)
-    return jsonify({'user': user}), 201
+    email = request.form['inputEmail']
+    password = request.form['inputPassword']
+    if mongo.db.users.find_one({'email': email}):
+        return jsonify({'result': 'Email already exist'})
+    else:
+        mongo.db.users.insert({'email': email, 'password': password, 'authenticated': False})
+        return jsonify({'result': 'Registered'})
 
 @app.route('/users/update/<string:user_name>', methods=['PUT'])
 def update_user(user_name):
