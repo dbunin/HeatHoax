@@ -25,6 +25,7 @@
         Data.getPlaces(event.latlng.lat, event.latlng.lng).then(function(res){
           vm.cityInformation = {};
           vm.cityInformation.places = res.data;
+          vm.cityname = vm.cityInformation.places.results[0].name;
           console.log(res);
         })
       })

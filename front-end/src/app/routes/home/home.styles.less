@@ -16,9 +16,44 @@
   box-shadow: -9px 8px 89px 0 rgba(0,0,0,0.61);
   z-index: 999;
   color: #474747;
+    
+    .place-section {
+        height: 300px;
+        overflow-y: auto;
+    }
 
+    .place {
+        height: 100px;
+        margin: 16px 11px 0px 10px;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+        background-color: #fff;
+        border: none;
+        position: relative;
+
+        img {
+            height: 100%;
+            width: 100%;
+            box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,.1), 0 0.9375rem 1.40625rem rgba(90,97,105,.1), 0 0.25rem 0.53125rem rgba(90,97,105,.12), 0 0.125rem 0.1875rem rgba(90,97,105,.1);
+            border-radius: 0.25rem;
+        }
+
+        h3 {
+            position: absolute;
+            top: 60%;
+            font-weight: 900;
+            font-size: 23px;
+            margin-left: 15px;
+            color: #fff;
+            letter-spacing: -1px;  
+            text-shadow: 10px 10px 5px rgba(0,0,0,0.35);
+        }
+    }
+    
   .place-item {
-    color: red;
+    color: black;
   }
 
   .step {

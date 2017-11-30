@@ -5,7 +5,7 @@
                 <h3 class="mb-4 text-center">HEAT HOAX</h3>
                 <p class="text-center"><b>Our mission</b> is to explore different ways to <b>find your next destination! 🚀</b></p>
                 <hr>
-                <div ng-if="!Home.cityInformation" class="row mx-2">
+                <div ng-if="!Home.cityInformation" class="row mx-2 place-section">
                     <div class="col-md-12 mb-6">
                       <h5><div class="step">1</div> <span class="step-label">Select Month</span></h5>
                       <p>This helps us rendering the temeratures on the map based on the month of the year</p>
@@ -27,13 +27,12 @@
                         <p>Click on the pins to get more information about the city</p>
                     </div>
                 </div>
-                <div ng-if="Home.cityInformation" class="row mx-2">
-                    <div style="max-height:300px; overflow-y:auto;" class="col-md-12 mb-6">
-                        <ul>
-                            <li class="place-item" ng-repeat="result in Home.cityInformation.places.results ">
-                                {{result.name}}
-                            </li>
-                        </ul>
+                <div ng-if="Home.cityInformation" class="row mx-2 place-section">
+                    <h4>{{Home.cityname}}</h4>
+                    <div class="place" ng-if="$index > 0"  ng-repeat="result in Home.cityInformation.places.results track by $index" >
+                        <img  alt="Shards Agency - Demo Landing Page"
+                            src="https://nomadlist.com/assets/img/cities/phuket-thailand-500px.jpg">
+                            <h3>{{Home.cityInformation.places.results[$index].name}}</h3>
                     </div>
                 </div>
             </div>
