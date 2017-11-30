@@ -7,8 +7,15 @@ from bson import json_util
 from flask import Flask, abort, jsonify, make_response, request
 from flask_pymongo import PyMongo
 
+from pymongo import MongoClient
+
+client = MongoClient('mongodb://192.168.27.65:27017')
+
+# Get the sampleDB database
+mongo = client.sampleDB
+
 app = Flask(__name__)
-mongo = PyMongo(app)
+# mongo = PyMongo(app)
 # temperary dictionary
 users = [
     {
@@ -103,7 +110,7 @@ def readCountries():
         return json.load(f)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='192.168.27.65',debug=True, port=10001)
 
 # class User:
 #     def __init__(user_name, name, last_name, password):
