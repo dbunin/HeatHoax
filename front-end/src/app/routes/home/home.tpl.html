@@ -5,7 +5,7 @@
                 <h3 class="mb-4 text-center">HEAT HOAX</h3>
                 <p class="text-center"><b>Our mission</b> is to explore different ways to <b>find your next destination! 🚀</b></p>
                 <hr>
-                <div class="row mx-2">
+                <div ng-if="!Home.cityInformation" class="row mx-2">
                     <div class="col-md-12 mb-6">
                       <h5><div class="step">1</div> <span class="step-label">Select Month</span></h5>
                       <p>This helps us rendering the temeratures on the map based on the month of the year</p>
@@ -25,6 +25,15 @@
                         </select>
                         <h5 class="mt-4"><div class="step spaced-step">2</div> <span class="step-label">Explore Map</span></h5>
                         <p>Click on the pins to get more information about the city</p>
+                    </div>
+                </div>
+                <div ng-if="Home.cityInformation" class="row mx-2">
+                    <div style="max-height:300px; overflow-y:auto;" class="col-md-12 mb-6">
+                        <ul>
+                            <li class="place-item" ng-repeat="result in Home.cityInformation.places.results ">
+                                {{result.name}}
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
