@@ -39,7 +39,7 @@ def getCountries():
 
 @app.route('/countries/<int:month>', methods=['GET'])
 def getCountriesMonth(month):
-    if month not in range(1, 12):
+    if month not in range(1, 13):
         return json_util.dumps({'Error': 'The month is not correct'})
     countries = json.loads(readCountries())
     city_of_month = [x for x in countries if x['date'] == month]
