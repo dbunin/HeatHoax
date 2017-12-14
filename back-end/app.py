@@ -3,6 +3,7 @@ import json
 import re
 import simplejson
 import bcrypt
+import codecs
 from bson import json_util
 from flask import Flask, abort, jsonify, make_response, request
 from flask_pymongo import PyMongo
