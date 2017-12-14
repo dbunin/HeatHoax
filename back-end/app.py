@@ -42,7 +42,9 @@ def getCountriesMonth(month):
         return json_util.dumps({'Error': 'The month is not correct'})
     countries = json.loads(readCountries())
     city_of_month = [x for x in countries if x['date'] == month]
-    return json_util.dumps(city_of_month)
+    for x in city_of_month:
+        x['city'].encode('latin1')
+    return json.dumps(city_of_month)
 
 
 @app.route('/users/', methods=['GET'])
@@ -115,8 +117,7 @@ def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)
 
 def readCountries():
-    with open('data.json', 'r') as f:
-        return json.load(f)
+    return json.load(codecs.open('data.json', 'r', 'utf-8'))
 
 if __name__ == '__main__':
     app.run(host='192.168.27.65',debug=True, port=10001)
