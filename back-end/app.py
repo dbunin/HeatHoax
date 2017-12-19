@@ -121,7 +121,7 @@ def readCountries():
     return json.load(codecs.open('data.json', 'r', 'utf-8'))
 
 if __name__ == '__main__':
-    app.run(host='192.168.27.65',debug=True, port=10001)
+    app.run(host='145.220.75.104',debug=True, port=10001)
 
 # class User:
 #     def __init__(user_name, name, last_name, password):
