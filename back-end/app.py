@@ -35,9 +35,9 @@ users = [
     }
 ]
 
-@app.route('/coordinatesToCity/', method['GET'])
-def getCityFromCoordinates(coordinates):
-    return json.dumps(rg.search(coordinates))
+@app.route('/coordinatesToCity/<int:latitude>/<int:longitude', method=['GET'])
+def getCityFromCoordinates(latitude, longitude):
+    return json.dumps(rg.search(latitude, longitude))
 
 @app.route('/countries/', methods=['GET'])
 def getCountries():
