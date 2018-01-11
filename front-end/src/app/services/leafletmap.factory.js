@@ -10,8 +10,8 @@
 
         return {
             initMap: function () {
-                var map = L.map('map').setView([39.5, -0.5], 5);
-                
+                map = L.map('map').setView([39.5, -0.5], 5);
+
                 // Set up the OSM layer
                 L.tileLayer(
                     'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
@@ -19,6 +19,9 @@
 
                 return map;
                 
+            },
+            getMap: function() {
+                return map;
             },
             createControl: function(control) {
                 // {name: "suggestions", position: 'bottom', component: "<suggestions></suggestions>", containerClassName: "suggestions"}

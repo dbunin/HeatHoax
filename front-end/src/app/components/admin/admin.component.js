@@ -4,15 +4,15 @@
     angular.module('app')
         .component('admin', {
             templateUrl: 'app/components/admin/admin.tpl.html',
-            controller: HomeCtrl,
+            controller: AdminCtrl,
             controllerAs: 'Admin',
             replace: true
         });
 
-    function HomeCtrl($scope, LeafletMap, Data, User) {
+    function AdminCtrl($scope, LeafletMap, Data, User) {
         var vm = this;
         vm.user = undefined;
-        vm.selectedRoute = 'login-register' //either register or login or login-register (default)
+        vm.selectedRoute = 'login-register' //either 'register' or 'login' or 'login-register' (default)
 
         function init() {
             vm.loggedIn = User.loggedIn();
