@@ -16,6 +16,7 @@ client = MongoClient('mongodb://127.0.0.1:27017')
 mongo = client.sampleDB
 
 app = Flask(__name__)
+CORS(app)
 # mongo = PyMongo(app)
 # temperary dictionary
 users = [
