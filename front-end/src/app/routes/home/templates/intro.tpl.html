@@ -2,7 +2,7 @@
         <div class="col-md-12 mb-6">
           <h5><div class="step">1</div> <span class="step-label">Select Month</span></h5>
           <p>This helps us rendering the temeratures on the map based on the month of the year</p>
-            <select ng-model="Home.selectedMonth" class="custom-select w-100" id="form-3-select" required="">
+            <select ng-change="Home.onMonthSelected(Home.selectedMonth)" ng-model="Home.selectedMonth" class="custom-select w-100" id="form-3-select" required="">
                 <option value="1">January</option>
                 <option value="2">February</option>
                 <option value="3">March</option>

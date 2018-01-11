@@ -59,6 +59,7 @@
     "bootstrap": "^4.0.0-beta.2",
     "es6-promise": "^4.2.2",
     "geojson-utils": "~1.1.0",
+    "heatmap.js": "^2.0.5",
     "isomorphic-fetch": "^2.2.1",
     "leaflet": "~1.1.0",
     "leaflet-geometryutil": "~0.8.0",
