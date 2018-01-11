@@ -5,7 +5,7 @@
       .factory('User', UserFactory);
   
     function UserFactory($http, $templateCache, config) {
-        var baseUrl = 'http://192.168.27.65:10001/'
+        var baseUrl = 'http://145.220.75.104:10001/'
         var user = undefined;
         return {
             get: function () {
