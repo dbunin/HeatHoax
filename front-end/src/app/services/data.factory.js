@@ -19,6 +19,9 @@
                 var latlon = lat + ',' + lon;
                 var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng='+ latlon + '&key='+ vars.googleApiKey2 + '&sensor=false';
                 return $http.get(url);
+            },
+            getTempAndCoordinates: function (month) {
+                return $http.get('http://145.220.75.104:10001/countries/' + month);
             }
         }
     }
