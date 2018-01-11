@@ -7,7 +7,7 @@ import codecs
 from bson import json_util
 from flask import Flask, abort, jsonify, make_response, request
 from flask_pymongo import PyMongo
-
+from flask_cors import CORS
 from pymongo import MongoClient
 
 client = MongoClient('mongodb://127.0.0.1:27017')
