@@ -9,6 +9,7 @@ from flask import Flask, abort, jsonify, make_response, request
 from flask_pymongo import PyMongo
 from flask_cors import CORS
 from pymongo import MongoClient
+import reverse_geocoder as rg
 
 client = MongoClient('mongodb://127.0.0.1:27017')
 
@@ -33,6 +34,10 @@ users = [
         'password': u'password'
     }
 ]
+
+# @app.route('/coordinatesToCity/', method=['GET'])
+# def getCityFromCoordinates(coordinates):
+#     return json.dumps(rg.search(coordinates))
 
 @app.route('/countries/', methods=['GET'])
 def getCountries():

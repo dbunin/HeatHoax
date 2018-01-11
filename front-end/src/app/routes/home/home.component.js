@@ -43,21 +43,35 @@
             vm.cityInformation = undefined;
           }
         })
-
-        // Data.getCityByCoordinates(event.latlng.lat, event.latlng.lng).then(function(res){
-        //   console.log('city', res);
-        // })
       })
       // <suggestions></suggestions>
       // LeafletMap.createControl({name: "suggestions", position: 'bottomright', component: '<suggestions class="suggestions"></suggestions>', containerClassName: "suggestions"})
     }
 
+<<<<<<< HEAD
 
     vm.showRoute = function(route) {
       vm.showingRoute = route;
     }
 
 
+=======
+    vm.onMonthSelected = function(month) {
+      Data.getTempAndCoordinates(month).then(function(res){
+        console.log(month)
+        var temperatures_and_coordinates = []
+        var json = res.data;
+        angular.forEach(json, function(value){
+          var temp = Math.round(100*(value['averageTemperature'] + 45)/90)/100
+          temperatures_and_coordinates.push([value['latitude'], value['longitude'], temp])
+        })
+
+          console.log(temperatures_and_coordinates)
+          console.log(json)
+      })
+    }
+
+>>>>>>> 7a0d29f3689123de11378df80d9f3f229fc3d88b
     init();
   }
 })();
