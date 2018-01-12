@@ -45,15 +45,9 @@
                     valueField: 'count',
                     blur: 0.2,
                     gradient: { 
-<<<<<<< HEAD
-                    '.2': 'blue',
-                    '.5': 'orange',
-                    '.9': 'red'
-=======
                     '0.05': 'blue',
                     '0.55': 'yellow',
                     '1': 'red'
->>>>>>> d589fc5fc9afc2746b9afb7a83fc0ed5ee09e862
                     }
                 };
                 heatmapLayer = new HeatmapOverlay(cfg).addTo(map);
