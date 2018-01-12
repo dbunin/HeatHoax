@@ -10,6 +10,7 @@
     });
 
   function HomeCtrl($scope, LeafletMap, Data) {
+    var map;
     var vm = this;
     vm.routes = {
       intro: 'intro',
@@ -21,53 +22,65 @@
       edit_admin: 'edit_admin'
     };
     vm.showingRoute = vm.routes.intro;
-    
     vm.selectedMonth = 0;
+    vm.selectedCity = undefined;
     vm.cityInformation = undefined;
     
     function init() {
-      
-      var map = LeafletMap.initMap('map');
-
-      map.on('click', function(event) {
-        console.log(event.latlng);
-
-        Data.getPlaces(event.latlng.lat, event.latlng.lng).then(function(res){
-          console.log(res);
-          if (res.data.results.length > 0) {
-            vm.cityInformation = {};
-            vm.cityInformation.places = res.data;
-            vm.cityname = vm.cityInformation.places.results[0].name;
-            vm.showRoute(vm.routes.explore);
-          } else {
-            vm.cityInformation = undefined;
-          }
-        })
-      })
-      // <suggestions></suggestions>
-      // LeafletMap.createControl({name: "suggestions", position: 'bottomright', component: '<suggestions class="suggestions"></suggestions>', containerClassName: "suggestions"})
+      map = LeafletMap.initMap('map');
+      createEventHandlers();
     }
 
-    vm.onMonthSelected = function(month) {
+    function createEventHandlers() {
+      map.on('click', function(event) {
+        console.log(event.latlng);
+        getPlacesSuggestions(event.latlng);
+      })
+    }
+
+    function getTempAndCoordinates(month) {
       Data.getTempAndCoordinates(month).then(function(res){
-        console.log(month)
         var temperatures_and_coordinates = []
         var json = res.data;
-
         temperatures_and_coordinates = _.map(json, function(value) {
           var temp = Math.round(100*(value['averageTemperature'] + 45)/90)/100;
           return {lat: parseFloat(value['longitude'])||0, lng: parseFloat(value['latitude'])||0, count: temp||0 }
         })
-        
-        console.log(temperatures_and_coordinates);
-
         LeafletMap.renderHeatmap(temperatures_and_coordinates);
-
-          console.log(temperatures_and_coordinates)
-          console.log(json)
       })
     }
 
+    function getPlacesSuggestions(latlng) {
+      Data.getPlaces(latlng.lat, latlng.lng).then(function(res){
+        if (res.data.results.length > 0) {
+          vm.cityInformation = {};
+          vm.cityInformation.places = res.data;
+          vm.cityname = vm.cityInformation.places.results[0].name;
+          getPossibleRoutes(vm.selectedCity, vm.cityname);
+          vm.showRoute(vm.routes.explore);
+        } else {
+          vm.cityInformation = undefined;
+        }
+      })
+    }
+
+    vm.placeAutocomplete = function(val) {
+      return Data.placeAutocomplete(val).then(function(response){
+        return response.data.places.map(function(item){
+          return item.shortName;
+        });
+      });
+    };
+
+    function getPossibleRoutes(from, to) {
+      Data.getPossibleRoutes(from, to).then(function(res) {
+          console.log(res);
+      })
+    }
+
+    vm.onMonthSelected = function(month) {
+      getTempAndCoordinates(month);
+    }
 
     vm.showRoute = function(route) {
       vm.showingRoute = route;

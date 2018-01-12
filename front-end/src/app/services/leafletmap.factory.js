@@ -10,7 +10,7 @@
 
         return {
             initMap: function () {
-                map = new L.Map('map').setView([-37.87, 175.475], 12);
+                map = new L.Map('map').setView([37.16031654673677, 14.490966796875002], 3);
                 L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png',
                     {maxZoom: 19}).addTo(map); 
 
@@ -45,9 +45,9 @@
                     valueField: 'count',
                     blur: 0.95,
                     gradient: { 
-                    '.5': 'green',
-                    '.8': 'orange',
-                    '.95': 'blue'
+                    '.2': 'blue',
+                    '.5': 'orange',
+                    '.9': 'red'
                     }
                 };
                 var heatmapLayer = new HeatmapOverlay(cfg).addTo(map);
