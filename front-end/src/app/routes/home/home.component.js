@@ -53,14 +53,22 @@
         console.log(month)
         var temperatures_and_coordinates = []
         var json = res.data;
-
+        var count = 0
         temperatures_and_coordinates = _.map(json, function(value) {
-          var temp = Math.round(100*(value['averageTemperature'] + 45)/90)/100;
+          
+          var temp = Math.round(100*(value['averageTemperature'] + 30)/80)/100;
+          if(value['averageTemperature']<0){
+            count++
+            console.log('count: ' + count)
+            console.log(value['averageTemperature'])
+            console.log(temp)
+          }
           return {lat: parseFloat(value['longitude'])||0, lng: parseFloat(value['latitude'])||0, count: temp||0 }
         })
         
         console.log(temperatures_and_coordinates);
 
+        LeafletMap.removeTempOverlay();
         LeafletMap.renderHeatmap(temperatures_and_coordinates);
 
           console.log(temperatures_and_coordinates)
