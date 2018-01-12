@@ -1,6 +1,8 @@
+
+<p>Show Favourites</p>
+<hr>
 <h4>{{Home.cityname}}</h4>
-<div class="place" ng-if="$index > 0"  ng-repeat="result in Home.cityInformation.places.results track by $index" >
-    <img  alt="Shards Agency - Demo Landing Page"
-        src="https://nomadlist.com/assets/img/cities/phuket-thailand-500px.jpg">
-        <h3>{{Home.cityInformation.places.results[$index].name}}</h3>
-</div>
+<hr>
+<ul style="max-height:200px;overflow-y:auto;" ng-if="$index > 0"  ng-repeat="result in Home.cityInformation.places.results track by $index" >
+    <li>{{Home.cityInformation.places.results[$index].name}}</li>
+</ul>

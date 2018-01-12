@@ -1,26 +1,26 @@
 <div ng-if="!Home.cityInformation" class="row mx-2 place-section">
-        <div class="col-md-12 mb-6">
-          <h5><div class="step">1</div> <span class="step-label">Select Month</span></h5>
-          <p>This helps us rendering the temeratures on the map based on the month of the year</p>
-            <select ng-change="Home.onMonthSelected(Home.selectedMonth)" ng-model="Home.selectedMonth" class="custom-select w-100" id="form-3-select" required="">
-                <option value="1">January</option>
-                <option value="2">February</option>
-                <option value="3">March</option>
-                <option value="4">April</option>
-                <option value="5">May</option>
-                <option value="6">June</option>
-                <option value="7">July</option>
-                <option value="8">August</option>
-                <option value="9">September</option>
-                <option value="10">October</option>
-                <option value="11">November</option>
-                <option value="12">December</option>
-            </select>
-            <h5><div class="step mt-4">1</div> <span class="step-label">Select Month</span></h5>
-            <p>This helps us rendering the temeratures on the map based on the month of the year</p>
-            <div class="input-group"><input ng-model="Home.selectedCity" placeholder="Locations loaded via $http" uib-typeahead="address for address in Home.placeAutocomplete($viewValue)" type="text" class="form-control" id="form1-email" placeholder="From: E.g. Eindhoven" autocomplete="off"> <span class="input-group-addon"><i class="fa fa-map-marker"></i></span></div>
-            <h5 class="mt-4"><div class="step spaced-step">2</div> <span class="step-label">Explore Map</span></h5>
-            <p>Click on the pins to get more information about the city</p>
-        </div>
+    <div class="col-md-12 mb-6">
+        <h5><div class="step">1</div> <span class="step-label">Select Month</span></h5>
+        <p>This helps us rendering the temeratures on the map based on the month of the year</p>
+        <select ng-change="Home.onMonthSelected(Home.selectedMonth)" ng-model="Home.selectedMonth" class="custom-select w-100" id="form-3-select" required="">
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+        <h5><div class="step mt-4">1</div> <span class="step-label">Select Month</span></h5>
+        <p>This helps us rendering the temeratures on the map based on the month of the year</p>
+        <div class="input-group"><input ng-model="Home.selectedCity" placeholder="Locations loaded via $http" uib-typeahead="address for address in Home.placeAutocomplete($viewValue)" type="text" class="form-control" id="form1-email" placeholder="From: E.g. Eindhoven" autocomplete="off"> <span class="input-group-addon"><i class="fa fa-map-marker"></i></span></div>
+        <h5 class="mt-4"><div class="step spaced-step">2</div> <span class="step-label">Explore Map</span></h5>
+        <p>Click on the pins to get more information about the city</p>
     </div>
+</div>
     
