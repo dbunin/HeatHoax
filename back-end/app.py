@@ -40,7 +40,7 @@ users = [
 #     return json.dumps(rg.search(coordinates))
 
 @app.route('/countries/<int:month>/<string:city>', methods=['GET'])
-def getCountriesMonthCity(month):
+def getCountriesMonthCity(month, city):
     if month not in range(1, 13):
         return json_util.dumps({'Error': 'The month is not correct'})
     countries = json.loads(readCountries())
