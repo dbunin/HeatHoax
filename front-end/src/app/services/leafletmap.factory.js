@@ -45,8 +45,11 @@
                     valueField: 'count',
                     blur: 0.2,
                     gradient: { 
-                    '0.05': 'blue',
-                    '0.55': 'yellow',
+                    '0.00': 'white',    
+                    '0.20': 'blue', 
+                    '0.40': 'green',
+                    '0.65': 'yellow',
+                    '0.80': 'orange',
                     '1': 'red'
                     }
                 };
