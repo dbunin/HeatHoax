@@ -6,7 +6,7 @@
   
     function LeafletMap(config, Overlay, GeoUtils, Data, $compile, $rootScope) {
         var controls = {};
-        var map;
+        var map, heatmapLayer;
 
         return {
             initMap: function () {
@@ -29,7 +29,7 @@
                     var cfg = {
                     // radius should be small ONLY if scaleRadius is true (or small radius is intended)
                     // if scaleRadius is false it will be the constant radius used in pixels
-                    "radius": 15,
+                    "radius": 7,
                     "maxOpacity": .5, 
                     // scales the radius based on map zoom
                     "scaleRadius": false, 
@@ -43,17 +43,28 @@
                     lngField: 'lng',
                     // which field name in your data represents the data value - default "value"
                     valueField: 'count',
-                    blur: 0.95,
+                    blur: 0.2,
                     gradient: { 
+<<<<<<< HEAD
                     '.2': 'blue',
                     '.5': 'orange',
                     '.9': 'red'
+=======
+                    '0.05': 'blue',
+                    '0.55': 'yellow',
+                    '1': 'red'
+>>>>>>> d589fc5fc9afc2746b9afb7a83fc0ed5ee09e862
                     }
                 };
-                var heatmapLayer = new HeatmapOverlay(cfg).addTo(map);
+                heatmapLayer = new HeatmapOverlay(cfg).addTo(map);
                 console.log(testData);
                 heatmapLayer.setData(testData);
     
+            },
+            removeTempOverlay: function() {
+                if(heatmapLayer) {
+                    heatmapLayer.remove();
+                }
             },
             createControl: function(control) {
                 // {name: "suggestions", position: 'bottom', component: "<suggestions></suggestions>", containerClassName: "suggestions"}
