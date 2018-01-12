@@ -16,10 +16,10 @@
             <option value="11">November</option>
             <option value="12">December</option>
         </select>
-        <h5><div class="step mt-4">1</div> <span class="step-label">Select Month</span></h5>
-        <p>This helps us rendering the temeratures on the map based on the month of the year</p>
-        <div class="input-group"><input ng-model="Home.selectedCity" placeholder="Locations loaded via $http" uib-typeahead="address for address in Home.placeAutocomplete($viewValue)" type="text" class="form-control" id="form1-email" placeholder="From: E.g. Eindhoven" autocomplete="off"> <span class="input-group-addon"><i class="fa fa-map-marker"></i></span></div>
-        <h5 class="mt-4"><div class="step spaced-step">2</div> <span class="step-label">Explore Map</span></h5>
+        <h5><div class="step mt-4">2</div> <span class="step-label">Search for a city</span></h5>
+        <p>Choose a city to view the average temperature for the selected month</p>
+        <div class="input-group"><input ng-model="Home.selectedCity" placeholder="Type city name here" uib-typeahead="address for address in Home.placeAutocomplete($viewValue)" type="text" class="form-control" id="form1-email" placeholder="From: E.g. Eindhoven" autocomplete="off"> <span class="input-group-addon"><i class="fa fa-map-marker"></i></span></div>
+        <h5 class="mt-4"><div class="step spaced-step">3</div> <span class="step-label">Explore Map</span></h5>
         <p>Click on the pins to get more information about the city</p>
     </div>
 </div>
