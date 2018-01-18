@@ -39,6 +39,16 @@ users = [
 # def getCityFromCoordinates(coordinates):
 #     return json.dumps(rg.search(coordinates))
 
+@app.route('/countries/<int:month>/<string:city>', methods=['GET'])
+def getCountriesMonthCity(month, city):
+    if month not in range(1, 13):
+        return json_util.dumps({'Error': 'The month is not correct'})
+    countries = json.loads(readCountries())
+    city_of_month = [x for x in countries if x['date'] == month and x['city'] == city]
+    for x in city_of_month:
+        x['city'].encode('latin1')
+    return json.dumps(city_of_month)
+
 @app.route('/countries/', methods=['GET'])
 def getCountries():
     return readCountries()
@@ -127,7 +137,7 @@ def readCountries():
     return json.load(codecs.open('data.json', 'r', 'utf-8'))
 
 if __name__ == '__main__':
-    app.run(host='localhost',debug=True, port=10001)
+    app.run(host='192.168.104.10',debug=True, port=10001)
 
 # class User:
 #     def __init__(user_name, name, last_name, password):
