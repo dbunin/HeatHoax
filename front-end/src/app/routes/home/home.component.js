@@ -37,7 +37,10 @@
 
     function createEventHandlers() {
       map.on('click', function(event) {
-        console.log(event.latlng);
+        if (!vm.selectedCity) {
+          alert("No from_city field is empty!")
+          return;
+        }
         getPlacesSuggestions(event.latlng);
       })
     }
@@ -88,7 +91,10 @@
     }
 
     function getBookmarksFromLocalStorage() {
-      bookmarks = JSON.parse(localStorage.bookmarks);
+      if (localStorage.bookmarks)
+        bookmarks = JSON.parse(localStorage.bookmarks);
+      else 
+        bookmarks = [];
     }
 
     function setBookmarksToLocalStorage(bookmarks) {
