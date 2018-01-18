@@ -4212,6 +4212,10 @@ ng-dependencies@~0.2.0:
     estraverse "^1.5.1"
     lodash "^3.0.1"
 
+ngstorage@^0.3.11:
+  version "0.3.11"
+  resolved "https://registry.yarnpkg.com/ngstorage/-/ngstorage-0.3.11.tgz#1637c45b872d909d9cc7e18b374898d50b2e844f"
+
 no-case@^2.2.0:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/no-case/-/no-case-2.3.2.tgz#60b813396be39b3f1288a4c1ed5d1e7d28b464ac"

@@ -12,6 +12,7 @@
   function HomeCtrl($scope, LeafletMap, Data) {
     var map;
     var vm = this;
+    var bookmarks = undefined;
     vm.routes = {
       intro: 'intro',
       explore: 'explore',
@@ -29,6 +30,9 @@
     function init() {
       map = LeafletMap.initMap('map');
       createEventHandlers();
+
+      getBookmarksFromLocalStorage();
+
     }
 
     function createEventHandlers() {
@@ -76,6 +80,21 @@
       })
     }
 
+    function getPossibleRoutes(from, to) {
+      Data.getPossibleRoutes(from, to).then(function(res) {
+        console.log(res.data.routes)
+          vm.possibleRoutes = res.data.routes;
+      })
+    }
+
+    function getBookmarksFromLocalStorage() {
+      bookmarks = JSON.parse(localStorage.bookmarks);
+    }
+
+    function setBookmarksToLocalStorage(bookmarks) {
+      localStorage.setItem("bookmarks", JSON.stringify({test: 'teest'}));
+    }
+
     vm.placeAutocomplete = function(val) {
       return Data.placeAutocomplete(val).then(function(response){
         return response.data.places.map(function(item){
@@ -84,19 +103,17 @@
       });
     };
 
-    function getPossibleRoutes(from, to) {
-      Data.getPossibleRoutes(from, to).then(function(res) {
-        console.log(res.data.routes)
-          vm.possibleRoutes = res.data.routes;
-      })
-    }
-
     vm.onMonthSelected = function(month) {
       getTempAndCoordinates(month);
     }
 
     vm.showRoute = function(route) {
       vm.showingRoute = route;
+    }
+
+    vm.addBookmark = function(item) {
+      bookmarks.push(item);
+      setBookmarksToLocalStorage(bookmarks);
     }
 
 

@@ -5,7 +5,7 @@
         'ngAnimate',
         'app.config',
         'ui.router',
-        'ui.bootstrap',
+        'ui.bootstrap'
         // 'app.templatecache' add in prod
     ]);
 })();
