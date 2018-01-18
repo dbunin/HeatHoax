@@ -5,7 +5,6 @@
                 <p ng-click="Home.showRoute(Home.routes.login_register)">Login</p>
                 <h3 class="mb-4 text-center">HEAT HOAX</h3>
                 <p class="text-center"><b>Our mission</b> is to explore different ways to <b>find your next destination! 🚀</b></p>
-                <hr>
                 <div ng-if="Home.showingRoute === Home.routes.intro" ng-include="'app/routes/home/templates/intro.tpl.html'"> </div>  
                 <div ng-if="Home.showingRoute === Home.routes.explore" ng-include="'app/routes/home/templates/explore.tpl.html'"></div>
                 <div ng-if="Home.showingRoute === Home.routes.login_register" ng-include="'app/routes/home/templates/register-login.tpl.html'"></div>

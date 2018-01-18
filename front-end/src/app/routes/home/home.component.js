@@ -86,7 +86,8 @@
 
     function getPossibleRoutes(from, to) {
       Data.getPossibleRoutes(from, to).then(function(res) {
-          console.log(res);
+        console.log(res.data.routes)
+          vm.possibleRoutes = res.data.routes;
       })
     }
 
