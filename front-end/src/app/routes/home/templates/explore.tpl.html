@@ -1,17 +1,40 @@
 
-<p>Show Favourites</p>
+<div class="text-center mt-2">
+    <button ng-click="Home.showingBookmarks=!Home.showingBookmarks;" type="button" class="btn btn-pill btn-warning"><i class="fa fa-star mr-1"></i>
+        <span ng-show="showingBookmarks">Back</span>
+        <span ng-show="!showingBookmarks">Show Bookmarks</span>
+    </button>
+</div>
+
 <hr>
-<h4>{{Home.cityname}}</h4>
-<hr>
-<ul style="max-height:200px;overflow-y:auto;" >
-    <li ng-if="$index > 0"  ng-repeat="route in Home.possibleRoutes">
-        <a target="_blank" ng-href="https://www.rome2rio.com/s/{{Home.selectedCity}}/{{Home.cityname}}"><b>(${{route.indicativePrices[0].price}})</b>{{route.name}}</a>
-    </li> 
-</ul>
-<hr>
-<p>Places of interest</p>
-<ul style="max-height:200px;overflow-y:auto;" >
-    <li ng-if="$index > 0"  ng-repeat="result in Home.cityInformation.places.results track by $index">
-        {{Home.cityInformation.places.results[$index].name}}
-    </li>
-</ul>
+
+<div ng-if="Home.showingBookmarks">
+    <p ng-show="Home.bookmarks.length < 1">
+        No Bookmarks saved
+    </p>
+    <ul ng-show="Home.bookmarks.length > 0">
+        <li ng-repeat="bookmark in Home.bookmarks">
+            From: <b>{{bookmark.from}}</b>, To: <b>{{bookmark.to}}</b>
+        </li>
+    </ul>
+</div>
+
+<div ng-if="!Home.showingBookmarks">
+    <h4>
+        {{Home.cityname}}
+        <button ng-click="Home.addBookmark({from: Home.selectedCity, to: Home.cityname})" type="button" class="btn btn-sm btn-outline-secondary btn-pill">Save</button>
+    </h4>
+    <hr>
+    <ul style="max-height:200px;overflow-y:auto;" >
+        <li ng-if="$index > 0"  ng-repeat="route in Home.possibleRoutes">
+            <a target="_blank" ng-href="https://www.rome2rio.com/s/{{Home.selectedCity}}/{{Home.cityname}}"><b>(${{route.indicativePrices[0].price}})</b>{{route.name}}</a>
+        </li> 
+    </ul>
+    <hr>
+    <p>Places of interest</p>
+    <ul style="max-height:200px;overflow-y:auto;" >
+        <li ng-if="$index > 0"  ng-repeat="result in Home.cityInformation.places.results track by $index">
+            {{Home.cityInformation.places.results[$index].name}}
+        </li>
+    </ul>        
+</div>

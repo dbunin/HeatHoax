@@ -12,7 +12,7 @@
   function HomeCtrl($scope, LeafletMap, Data) {
     var map;
     var vm = this;
-    var bookmarks = undefined;
+    vm.bookmarks = undefined;
     vm.routes = {
       intro: 'intro',
       explore: 'explore',
@@ -26,6 +26,7 @@
     vm.selectedMonth = 0;
     vm.selectedCity = undefined;
     vm.cityInformation = undefined;
+    vm.showingBookmarks = false;
     
     function init() {
       map = LeafletMap.initMap('map');
@@ -41,6 +42,7 @@
           alert("No from_city field is empty!")
           return;
         }
+        vm.showingBookmarks = false;
         getPlacesSuggestions(event.latlng);
       })
     }
@@ -92,13 +94,13 @@
 
     function getBookmarksFromLocalStorage() {
       if (localStorage.bookmarks)
-        bookmarks = JSON.parse(localStorage.bookmarks);
+        vm.bookmarks = JSON.parse(localStorage.bookmarks);
       else 
-        bookmarks = [];
+        vm.bookmarks = [];
     }
 
     function setBookmarksToLocalStorage(bookmarks) {
-      localStorage.setItem("bookmarks", JSON.stringify({test: 'teest'}));
+      localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
     }
 
     vm.placeAutocomplete = function(val) {
@@ -118,8 +120,10 @@
     }
 
     vm.addBookmark = function(item) {
-      bookmarks.push(item);
-      setBookmarksToLocalStorage(bookmarks);
+      vm.bookmarks.push(item);
+      setBookmarksToLocalStorage(vm.bookmarks);
+      getBookmarksFromLocalStorage();
+      alert('Search saved!');
     }
 
 
