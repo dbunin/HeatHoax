@@ -4,10 +4,14 @@
 <h4>{{Home.cityname}}</h4>
 <hr>
 <ul style="max-height:200px;overflow-y:auto;" >
-    <li ng-if="$index > 0"  ng-repeat="route in Home.possibleRoutes"><b>(${{route.indicativePrices[0].price}})</b>{{route.name}}</li>
+    <li ng-if="$index > 0"  ng-repeat="route in Home.possibleRoutes">
+        <a target="_blank" ng-href="https://www.rome2rio.com/s/{{Home.selectedCity}}/{{Home.cityname}}"><b>(${{route.indicativePrices[0].price}})</b>{{route.name}}</a>
+    </li> 
 </ul>
 <hr>
 <p>Places of interest</p>
 <ul style="max-height:200px;overflow-y:auto;" >
-    <li ng-if="$index > 0"  ng-repeat="result in Home.cityInformation.places.results track by $index">{{Home.cityInformation.places.results[$index].name}}</li>
+    <li ng-if="$index > 0"  ng-repeat="result in Home.cityInformation.places.results track by $index">
+        {{Home.cityInformation.places.results[$index].name}}
+    </li>
 </ul>

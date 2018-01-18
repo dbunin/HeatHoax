@@ -28,6 +28,7 @@
                 return $http.get('http://free.rome2rio.com/api/1.4/json/Autocomplete?key='+ vars. rome2rioApiKey +'&query=' + place + '')
             },
             getPossibleRoutes: function(from, to) {
+                console.log('http://free.rome2rio.com/api/1.4/json/Search?key='+ vars. rome2rioApiKey +'&oName=' + from + '&dName=' + to + '&noRideshare')
                 return $http.get('http://free.rome2rio.com/api/1.4/json/Search?key='+ vars. rome2rioApiKey +'&oName=' + from + '&dName=' + to + '&noRideshare')
             }
         }
